@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant S as SAP S/4HANA
+    participant I as Integration Service
+    participant V as Validator/Transformer
+    participant K as Kafka
+    participant F as FinSight API
+    participant R as Reconciliation
+    S->>I: Extract delta (approved provider)
+    I->>V: Canonical source records
+    V->>V: Validate, map, enrich
+    V->>K: Publish domain events
+    K->>F: Idempotent upsert
+    F-->>K: Accepted/rejected result
+    K->>R: Batch results + source totals
+    R->>R: Count and financial checks
+    R-->>I: Reconciliation status / checkpoint decision

@@ -1,0 +1,815 @@
+{
+  "info": {
+    "name": "Project 1B - SAP and FinSight API Examples",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Illustrative requests; replace sandbox URLs and auth variables with approved values."
+  },
+  "item": [
+    {
+      "name": "SAP - General Ledger",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{sapBaseUrl}}/api/v1/general-ledger?limit=100",
+          "host": [
+            "{{sapBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "general-ledger"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "FinSight - General Ledger",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{finSightBaseUrl}}/api/v1/general-ledger?limit=100",
+          "host": [
+            "{{finSightBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "general-ledger"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "SAP - Accounts Payable",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{sapBaseUrl}}/api/v1/accounts-payable?limit=100",
+          "host": [
+            "{{sapBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "accounts-payable"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "FinSight - Accounts Payable",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{finSightBaseUrl}}/api/v1/accounts-payable?limit=100",
+          "host": [
+            "{{finSightBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "accounts-payable"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "SAP - Accounts Receivable",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{sapBaseUrl}}/api/v1/accounts-receivable?limit=100",
+          "host": [
+            "{{sapBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "accounts-receivable"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "FinSight - Accounts Receivable",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{finSightBaseUrl}}/api/v1/accounts-receivable?limit=100",
+          "host": [
+            "{{finSightBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "accounts-receivable"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "SAP - Cost Centres",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{sapBaseUrl}}/api/v1/cost-centres?limit=100",
+          "host": [
+            "{{sapBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "cost-centres"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "FinSight - Cost Centres",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{finSightBaseUrl}}/api/v1/cost-centres?limit=100",
+          "host": [
+            "{{finSightBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "cost-centres"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "SAP - Profit Centres",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{sapBaseUrl}}/api/v1/profit-centres?limit=100",
+          "host": [
+            "{{sapBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "profit-centres"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "FinSight - Profit Centres",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{finSightBaseUrl}}/api/v1/profit-centres?limit=100",
+          "host": [
+            "{{finSightBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "profit-centres"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "SAP - Material Ledger",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{sapBaseUrl}}/api/v1/material-ledger?limit=100",
+          "host": [
+            "{{sapBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "material-ledger"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "FinSight - Material Ledger",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{finSightBaseUrl}}/api/v1/material-ledger?limit=100",
+          "host": [
+            "{{finSightBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "material-ledger"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "SAP - Purchase Orders",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{sapBaseUrl}}/api/v1/purchase-orders?limit=100",
+          "host": [
+            "{{sapBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "purchase-orders"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "FinSight - Purchase Orders",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{finSightBaseUrl}}/api/v1/purchase-orders?limit=100",
+          "host": [
+            "{{finSightBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "purchase-orders"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "SAP - Sales Orders",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{sapBaseUrl}}/api/v1/sales-orders?limit=100",
+          "host": [
+            "{{sapBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "sales-orders"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "FinSight - Sales Orders",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{finSightBaseUrl}}/api/v1/sales-orders?limit=100",
+          "host": [
+            "{{finSightBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "sales-orders"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "SAP - Fixed Assets",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{sapBaseUrl}}/api/v1/fixed-assets?limit=100",
+          "host": [
+            "{{sapBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "fixed-assets"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "FinSight - Fixed Assets",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{finSightBaseUrl}}/api/v1/fixed-assets?limit=100",
+          "host": [
+            "{{finSightBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "fixed-assets"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "SAP - Bank Statements",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{sapBaseUrl}}/api/v1/bank-statements?limit=100",
+          "host": [
+            "{{sapBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "bank-statements"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "FinSight - Bank Statements",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{finSightBaseUrl}}/api/v1/bank-statements?limit=100",
+          "host": [
+            "{{finSightBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "bank-statements"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "SAP - Budget vs Actual",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{sapBaseUrl}}/api/v1/budget-actual?limit=100",
+          "host": [
+            "{{sapBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "budget-actual"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "FinSight - Budget vs Actual",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{finSightBaseUrl}}/api/v1/budget-actual?limit=100",
+          "host": [
+            "{{finSightBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "budget-actual"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "SAP - Inventory",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{sapBaseUrl}}/api/v1/inventory?limit=100",
+          "host": [
+            "{{sapBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "inventory"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "FinSight - Inventory",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{accessToken}}"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{finSightBaseUrl}}/api/v1/inventory?limit=100",
+          "host": [
+            "{{finSightBaseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "inventory"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "sapBaseUrl",
+      "value": "https://sap-sandbox.example.in"
+    },
+    {
+      "key": "finSightBaseUrl",
+      "value": "https://finsight-sandbox.example.in"
+    },
+    {
+      "key": "accessToken",
+      "value": "REPLACE_WITH_SANDBOX_TOKEN"
+    }
+  ]
+}

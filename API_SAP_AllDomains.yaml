@@ -1,0 +1,449 @@
+openapi: 3.0.3
+info:
+  title: SAP Source API - Project 1B
+  version: 1.0.0
+  description: >-
+    Illustrative contract for the Zetheta Project 1B simulation. Confirm actual paths, fields, auth and limits with system owners.
+servers:
+  - url: https://sap-sandbox.example.in
+security:
+  - bearerAuth: []
+paths:
+  /api/v1/general-ledger:
+    get:
+      operationId: sap_general_ledger
+      summary: Retrieve General Ledger records
+      parameters:
+        - in: query
+          name: limit
+          schema: {type: integer, minimum: 1, maximum: 1000, default: 100}
+        - in: query
+          name: cursor
+          schema: {type: string}
+        - in: query
+          name: deltaToken
+          schema: {type: string}
+      responses:
+        '200':
+          description: Records retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      additionalProperties: true
+                  nextCursor:
+                    type: string
+                  nextDeltaToken:
+                    type: string
+        '400': {description: Invalid query or validation failure}
+        '401': {description: Unauthenticated}
+        '403': {description: Not authorised}
+        '429': {description: Rate limited; honour Retry-After}
+        '500': {description: Unexpected server error}
+  /api/v1/accounts-payable:
+    get:
+      operationId: sap_accounts_payable
+      summary: Retrieve Accounts Payable records
+      parameters:
+        - in: query
+          name: limit
+          schema: {type: integer, minimum: 1, maximum: 1000, default: 100}
+        - in: query
+          name: cursor
+          schema: {type: string}
+        - in: query
+          name: deltaToken
+          schema: {type: string}
+      responses:
+        '200':
+          description: Records retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      additionalProperties: true
+                  nextCursor:
+                    type: string
+                  nextDeltaToken:
+                    type: string
+        '400': {description: Invalid query or validation failure}
+        '401': {description: Unauthenticated}
+        '403': {description: Not authorised}
+        '429': {description: Rate limited; honour Retry-After}
+        '500': {description: Unexpected server error}
+  /api/v1/accounts-receivable:
+    get:
+      operationId: sap_accounts_receivable
+      summary: Retrieve Accounts Receivable records
+      parameters:
+        - in: query
+          name: limit
+          schema: {type: integer, minimum: 1, maximum: 1000, default: 100}
+        - in: query
+          name: cursor
+          schema: {type: string}
+        - in: query
+          name: deltaToken
+          schema: {type: string}
+      responses:
+        '200':
+          description: Records retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      additionalProperties: true
+                  nextCursor:
+                    type: string
+                  nextDeltaToken:
+                    type: string
+        '400': {description: Invalid query or validation failure}
+        '401': {description: Unauthenticated}
+        '403': {description: Not authorised}
+        '429': {description: Rate limited; honour Retry-After}
+        '500': {description: Unexpected server error}
+  /api/v1/cost-centres:
+    get:
+      operationId: sap_cost_centres
+      summary: Retrieve Cost Centres records
+      parameters:
+        - in: query
+          name: limit
+          schema: {type: integer, minimum: 1, maximum: 1000, default: 100}
+        - in: query
+          name: cursor
+          schema: {type: string}
+        - in: query
+          name: deltaToken
+          schema: {type: string}
+      responses:
+        '200':
+          description: Records retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      additionalProperties: true
+                  nextCursor:
+                    type: string
+                  nextDeltaToken:
+                    type: string
+        '400': {description: Invalid query or validation failure}
+        '401': {description: Unauthenticated}
+        '403': {description: Not authorised}
+        '429': {description: Rate limited; honour Retry-After}
+        '500': {description: Unexpected server error}
+  /api/v1/profit-centres:
+    get:
+      operationId: sap_profit_centres
+      summary: Retrieve Profit Centres records
+      parameters:
+        - in: query
+          name: limit
+          schema: {type: integer, minimum: 1, maximum: 1000, default: 100}
+        - in: query
+          name: cursor
+          schema: {type: string}
+        - in: query
+          name: deltaToken
+          schema: {type: string}
+      responses:
+        '200':
+          description: Records retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      additionalProperties: true
+                  nextCursor:
+                    type: string
+                  nextDeltaToken:
+                    type: string
+        '400': {description: Invalid query or validation failure}
+        '401': {description: Unauthenticated}
+        '403': {description: Not authorised}
+        '429': {description: Rate limited; honour Retry-After}
+        '500': {description: Unexpected server error}
+  /api/v1/material-ledger:
+    get:
+      operationId: sap_material_ledger
+      summary: Retrieve Material Ledger records
+      parameters:
+        - in: query
+          name: limit
+          schema: {type: integer, minimum: 1, maximum: 1000, default: 100}
+        - in: query
+          name: cursor
+          schema: {type: string}
+        - in: query
+          name: deltaToken
+          schema: {type: string}
+      responses:
+        '200':
+          description: Records retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      additionalProperties: true
+                  nextCursor:
+                    type: string
+                  nextDeltaToken:
+                    type: string
+        '400': {description: Invalid query or validation failure}
+        '401': {description: Unauthenticated}
+        '403': {description: Not authorised}
+        '429': {description: Rate limited; honour Retry-After}
+        '500': {description: Unexpected server error}
+  /api/v1/purchase-orders:
+    get:
+      operationId: sap_purchase_orders
+      summary: Retrieve Purchase Orders records
+      parameters:
+        - in: query
+          name: limit
+          schema: {type: integer, minimum: 1, maximum: 1000, default: 100}
+        - in: query
+          name: cursor
+          schema: {type: string}
+        - in: query
+          name: deltaToken
+          schema: {type: string}
+      responses:
+        '200':
+          description: Records retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      additionalProperties: true
+                  nextCursor:
+                    type: string
+                  nextDeltaToken:
+                    type: string
+        '400': {description: Invalid query or validation failure}
+        '401': {description: Unauthenticated}
+        '403': {description: Not authorised}
+        '429': {description: Rate limited; honour Retry-After}
+        '500': {description: Unexpected server error}
+  /api/v1/sales-orders:
+    get:
+      operationId: sap_sales_orders
+      summary: Retrieve Sales Orders records
+      parameters:
+        - in: query
+          name: limit
+          schema: {type: integer, minimum: 1, maximum: 1000, default: 100}
+        - in: query
+          name: cursor
+          schema: {type: string}
+        - in: query
+          name: deltaToken
+          schema: {type: string}
+      responses:
+        '200':
+          description: Records retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      additionalProperties: true
+                  nextCursor:
+                    type: string
+                  nextDeltaToken:
+                    type: string
+        '400': {description: Invalid query or validation failure}
+        '401': {description: Unauthenticated}
+        '403': {description: Not authorised}
+        '429': {description: Rate limited; honour Retry-After}
+        '500': {description: Unexpected server error}
+  /api/v1/fixed-assets:
+    get:
+      operationId: sap_fixed_assets
+      summary: Retrieve Fixed Assets records
+      parameters:
+        - in: query
+          name: limit
+          schema: {type: integer, minimum: 1, maximum: 1000, default: 100}
+        - in: query
+          name: cursor
+          schema: {type: string}
+        - in: query
+          name: deltaToken
+          schema: {type: string}
+      responses:
+        '200':
+          description: Records retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      additionalProperties: true
+                  nextCursor:
+                    type: string
+                  nextDeltaToken:
+                    type: string
+        '400': {description: Invalid query or validation failure}
+        '401': {description: Unauthenticated}
+        '403': {description: Not authorised}
+        '429': {description: Rate limited; honour Retry-After}
+        '500': {description: Unexpected server error}
+  /api/v1/bank-statements:
+    get:
+      operationId: sap_bank_statements
+      summary: Retrieve Bank Statements records
+      parameters:
+        - in: query
+          name: limit
+          schema: {type: integer, minimum: 1, maximum: 1000, default: 100}
+        - in: query
+          name: cursor
+          schema: {type: string}
+        - in: query
+          name: deltaToken
+          schema: {type: string}
+      responses:
+        '200':
+          description: Records retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      additionalProperties: true
+                  nextCursor:
+                    type: string
+                  nextDeltaToken:
+                    type: string
+        '400': {description: Invalid query or validation failure}
+        '401': {description: Unauthenticated}
+        '403': {description: Not authorised}
+        '429': {description: Rate limited; honour Retry-After}
+        '500': {description: Unexpected server error}
+  /api/v1/budget-actual:
+    get:
+      operationId: sap_budget_actual
+      summary: Retrieve Budget vs Actual records
+      parameters:
+        - in: query
+          name: limit
+          schema: {type: integer, minimum: 1, maximum: 1000, default: 100}
+        - in: query
+          name: cursor
+          schema: {type: string}
+        - in: query
+          name: deltaToken
+          schema: {type: string}
+      responses:
+        '200':
+          description: Records retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      additionalProperties: true
+                  nextCursor:
+                    type: string
+                  nextDeltaToken:
+                    type: string
+        '400': {description: Invalid query or validation failure}
+        '401': {description: Unauthenticated}
+        '403': {description: Not authorised}
+        '429': {description: Rate limited; honour Retry-After}
+        '500': {description: Unexpected server error}
+  /api/v1/inventory:
+    get:
+      operationId: sap_inventory
+      summary: Retrieve Inventory records
+      parameters:
+        - in: query
+          name: limit
+          schema: {type: integer, minimum: 1, maximum: 1000, default: 100}
+        - in: query
+          name: cursor
+          schema: {type: string}
+        - in: query
+          name: deltaToken
+          schema: {type: string}
+      responses:
+        '200':
+          description: Records retrieved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  data:
+                    type: array
+                    items:
+                      type: object
+                      additionalProperties: true
+                  nextCursor:
+                    type: string
+                  nextDeltaToken:
+                    type: string
+        '400': {description: Invalid query or validation failure}
+        '401': {description: Unauthenticated}
+        '403': {description: Not authorised}
+        '429': {description: Rate limited; honour Retry-After}
+        '500': {description: Unexpected server error}
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

@@ -1,0 +1,17 @@
+sequenceDiagram
+    participant W as Worker
+    participant F as FinSight API
+    participant CB as Circuit Breaker
+    participant DLQ as Dead Letter Queue
+    W->>CB: Request permission
+    CB-->>W: Closed / allow
+    W->>F: Upsert with idempotency key
+    F-->>W: 429 or 5xx
+    W->>W: Honour Retry-After / backoff with jitter
+    W->>CB: Record failure
+    alt retries exhausted or permanent error
+        W->>DLQ: Store sanitized failure metadata
+    else service recovers
+        W->>F: Retry safely
+        F-->>W: Accepted
+    end

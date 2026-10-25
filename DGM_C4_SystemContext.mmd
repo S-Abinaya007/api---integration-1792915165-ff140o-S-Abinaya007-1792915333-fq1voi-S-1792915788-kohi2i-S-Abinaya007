@@ -1,0 +1,12 @@
+flowchart LR
+    SAP["SAP S/4HANA 2023<br/>Finance & Operations"] -->|CDS/OData or ODP deltas| INT["Integration Gateway"]
+    INT --> VAL["Validation & Transformation"]
+    VAL --> K["Kafka / Domain Topics"]
+    K --> LOAD["FinSight Loader"]
+    LOAD --> FS["Zetheta FinSight 4.2"]
+    LOAD --> REC["Reconciliation Service"]
+    REC --> AUD["Audit Store / Lineage"]
+    INT --> MON["Monitoring & Alerting"]
+    VAL --> MON
+    LOAD --> MON
+    REC --> MON
